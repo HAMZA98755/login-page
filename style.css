@@ -1,0 +1,116 @@
+:root {
+    --main-radius: 8px;
+    --main-duration: .3s;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: springgreen;
+    height: 100vh;
+}
+/* Small Screan */
+@media (max-width: 768px) {
+    .container {
+        width: 400px;
+    }
+}
+/* Middle Screan */
+@media (min-width: 992px) {
+    .container {
+        width: 700px;
+    }
+}
+/* Large Screan  */
+@media (min-width: 1200px) {
+    .container {
+        width: 800px;
+    }
+}
+.container .login {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.container .welcome {
+    text-align: center;
+    margin: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: monospace;
+    color: seagreen;
+}
+
+form > div {
+    margin-bottom: 15px;
+}
+form > div label:not([for = year]) {
+    display: block;
+    color: navy;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: sans-serif;
+}
+form > div label[for = year] {
+    color: navy;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    margin-right: 20px;
+}
+form > div input {
+    outline: none;
+    border: none;
+    border-radius: var(--main-radius);
+    padding: 5px 0px 5px 24px;
+    background-color: rgba(46, 139, 86, 0.5);
+    font-size: unset;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 220px;
+}
+#phone-number {
+    padding-left: 50px;
+
+}
+span {
+    position: relative;
+}
+span::before {
+    content: "+963";
+    font-weight: bold;
+    position: absolute;
+    bottom: -2px;
+    right: 175px;
+    font-size: unset;
+    font-family: 'Courier New', Courier, monospace;
+}
+form > div select {
+    width: 50px;
+    font-size: 1.1em
+}
+form input[type="submit"] {
+    display: block;
+    font-weight: bold;
+    color: #13db6b;
+    background-color: #000cff;
+    border: none;
+    border-radius: var(--main-radius);
+    padding: 5px 20px;
+    width: 100px;
+    margin: 10px auto;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition-duration: var(--main-duration)
+}
+form input[type="submit"]:hover {
+    background-color: #000cffd6;
+}
